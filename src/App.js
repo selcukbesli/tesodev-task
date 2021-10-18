@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Landing from './pages/Landing';
@@ -7,9 +6,11 @@ import './App.css';
 import JSON_DATA from './data/data.json';
 
 function App() {
-  useEffect(() => {
+  const data = localStorage.getItem('data');
+
+  if (!data) {
     localStorage.setItem('data', JSON.stringify(JSON_DATA));
-  }, []);
+  }
 
   return (
     <Switch>
