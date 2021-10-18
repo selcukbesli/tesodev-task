@@ -1,0 +1,35 @@
+.button-primary {
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 8px;
+  font-size: 1.125rem;
+  color: var(--secondary-color);
+  text-shadow: 0 4px 4px var(--shadow-color);
+  padding: 13px 40px;
+  cursor: pointer;
+  max-height: 46px;
+}
+
+.button-.button-primary {
+  background: var(--ternary-color);
+  border-color: var(--ternary-color);
+}
+
+.button-clear {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--color-black);
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-clear span {
+  font-size: 1.25rem;
+}

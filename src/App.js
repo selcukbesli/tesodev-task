@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
+import Landing from './pages/Landing';
+import Results from './pages/Results';
 import './App.css';
+import JSON_DATA from './data/data.json';
 
 function App() {
+  useEffect(() => {
+    localStorage.setItem('data', JSON.stringify(JSON_DATA));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route path="/" component={Landing} exact />
+      <Route path="/results/:page" component={Results} />
+      <Redirect path="*" to="/" />
+    </Switch>
   );
 }
 

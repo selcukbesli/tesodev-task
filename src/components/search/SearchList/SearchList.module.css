@@ -1,0 +1,11 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+  margin-top: 18px;
+}
